@@ -1,0 +1,44 @@
+
+>dotnet --version
+>node --version
+>npm --version
+
+>dotnet new webapi -o Test01.API -n Test01.API
+
+*INSTALL EXTENTIONS
+1. C# for Visual Studio Code (powered by OmniSharp).
+2. C# IDE Extensions for VSCode (jchannon)
+3. NuGet Package Manager (jmrog)
+
+>dotnet run (Static Run)
+>dotnet watch run (Dynamic Change Detection Rerun)
+
+
+----Startup.cs
+// Use for HTTPS redirection temperorly disabled
+// app.UseHsts();
+// app.UseHttpsRedirection();
+
+//Integrated Security=SSPI;
+> dotnet restore  // update project
+
+-----MIGRATIONS
+// InitialModel => Name of Migration or TITLE // Make Snapshot of Migration But Not Applied to DB
+>dotnet ef migrations add InitialModel                
+
+//Remove Snapshot/Un Updated Migration
+>dotnet ef migrations remove
+
+//Apply Migration.Snapshot to DB
+>dotnet ef database update
+
+// if no migration before this : This command nullyfy Initial Migration from database
+>dotnet ef database update 0
+
+// Down Grade DB to Earlier Migration specified in <Mirgation Name>
+STEP 1 >dotnet ef database update <Mirgation Name>
+//AND THEN this command to remove from snapshot
+STEP 2 >dotnet ef migrations remove
+
+
+

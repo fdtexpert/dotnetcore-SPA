@@ -1,0 +1,18 @@
+ANG CLI INSTALLATION: [CLI=> Command Line Interface] [HOT MODULE REPLACEMENT(HMR)]
+
+1. Node Js(NPM Node Package Managaer) [node --version]
+
+2. npm install -g @angular/cli  (-g => Glabal-Execcable from any where) [ng --version]
+
+3. ng new <Proj Name>  (Create new project)
+
+4. ng serve (Start Agular) [http://localhost:4200]
+
+
+
+Component --> Create, Register, Add Element in an HTML markup
+
+ng g c <name of compnent> 
+
+ng g s <name of service>   //Add in Module.ts PROVIDER SECTION / Add in Constructor parameter / Import declaration 
+
